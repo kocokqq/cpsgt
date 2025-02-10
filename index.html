@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"> <!-- CDN untuk font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Sembiring Gadai Taras</title>
+    <style>
+      body {
+          font-family: 'Inter'; /* Menetapkan font Inter sebagai font default */
+          overflow-x: hidden;
+      }
+      .font-cinzel{
+        font-family: 'Cinzel';
+        }
+      .font-garamond{
+        font-family: 'EB Garamond';
+        font-weight: 500;
+        font-style: normal;  
+    }   
+
+     section{
+        overflow: hidden;
+     }
+  </style>
+
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.js"></script>
+    <script>
+    window.addEventListener('scroll', function(){
+        const navbar = document.getElementById('navbar'); 
+        const items = navbar.querySelectorAll('a');
+        if (window.scrollY > 1) {
+          navbar.classList.add('bg-white','text-black');
+          navbar.classList.remove('bg-transparent');
+          
+          items.forEach(item => {
+            item.classList.remove('text-white');
+            item.classList.add('text-black');
+          })
+        }
+        else {
+          navbar.classList.remove('bg-white', 'text-black');
+          navbar.classList.add('bg-transparent');
+
+          items.forEach(item => {
+            item.classList.remove('text-black');
+            item.classList.add('text-white');
+          });
+        }
+      });
+    </script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-10 bg-transparent">
+        <div class="max-w-7xl ml-8 py-4 px-4 sm:px-1 lg:px-8 lg:ml-40">
+            <div class="flex items-center py-6">
+                <div class="flex-shrink-0">
+                    <a href="" class="text-2xl font-bold text-white">
+                        <img src="logo.png" class="h-12" alt="8">
+                    </a>
+                </div>
+                <nav class="hidden ml-20 md:flex space-x-10">
+                    <a href="#tk" class="text-white font-semibold text-md hover:text-yellow-300">Tentang Kami</a>
+                    <a href="#pg" class="text-white font-semibold text-md hover:text-yellow-300">Produk Gadai</a>
+                    <a href="#" class="text-white font-semibold text-md hover:text-yellow-300">Berita & Artikel</a>
+                    <a href="#" class="text-white font-semibold text-md hover:text-yellow-300">Karir</a>
+                    <a href="https://www.whatsapp.com/download" class="font-semibold text-md hover:text-yellow-300">
+                    <button class="font-semibold text-yellow-400 bg-clip-text bg-yellow-50 hover:text-green-500">Hubungi Kami</button>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="relative pt-24 lg:pt-44">
+        <div class="absolute inset-0">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="/herovideo.mp4" type="video/mp4">
+                <!-- Tambahkan sumber tambahan jika perlu -->
+                Video tidak dapat diputar di perangkat ini.
+            </video>
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+        </div>
+        <div class="relative flex flex-col items-center justify-end text-center max-w-7xl mx-auto py-32 px-6 sm:py-48 lg:px-8 lg:ml-50 lg:mb-12">
+            <h1 class="font-cinzel font-bold text-2xl lg:text-6xl text-white">
+                <p class="text-yellow-400" style=" text-decoration-line: underline; text-decoration-color: currentColor; text-decoration-thickness: 3px; text-underline-offset: 10px;">Sembiring <span style="color: aliceblue; text-decoration-line: underline; text-decoration-color: currentColor; text-decoration-thickness: 3px; text-underline-offset: 10px;"> Gadai Taras</span> </p>
+            </h1>
+            <p></p>
+            <a href="#" class="font-cinzel text-xs leading-6 lg:text-lg inline-block text-white font-semibold py-2 px-2 rounded-md hover:bg-gray-900">
+                <span class="text-yellow-400">"Kekuatan Dalam</span> Kebersamaan Keuangan"
+            </a>
+        </div>
+    </div>
+
+<!-- Tentang Kami Section -->
+<section class="" id="tk">
+    <h1 class="font-cinzel text-center tracking-wide mt-8 lg:mt-0 lg:py-2 text-2xl lg:text-4xl font-extrabold underline lg:no-underline text-yellow-400">TENTANG KAMI</h1>
+    <div class="container mx-auto text-center lg:text-left grid grid-cols-1 md:grid-cols-2 py-8 gap-6">
+
+        <!-- Baris 1: Paragraf | Gambar -->
+        <div class="relative flex flex-col items-center justify-center py-12" data-aos="fade-right">
+             <!-- visual dot -->
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute top-0 left-0"></p>
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute top-0 right-0"></p>
+           
+            <p class="text-black text-md lg:text-lg leading-8 px-6 mr-2 text-balance">
+                Selama lebih dari dua dekade memperhatikan dinamika kehidupan masyarakat Karo, <a class="font-cinzel font-bold text-yellow-400">PT. Sembiring Gadai Taras</a> menyadari 
+                keterbatasan akses terhadap pendanaan darurat bagi masyarakat lokal di Tanah Karo. Berdasarkan pengamatan 
+                bahwa mayoritas masyarakat Karo masih mengandalkan <a class="">emas</a> sebagai instrumen investasi, masyarakat sering dihadapkan pada situasi dilematis terkait fluktuasi harga <a class="">emas</a> yang tidak 
+                stabil. Akibatnya, banyak yang terpaksa menjual <a class="">emas</a> mereka dalam kondisi yang kurang menguntungkan.</p>            
+              
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute bottom-0 left-0"></p>
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute bottom-0 right-0"></p>
+        </div>
+        <div class="flex justify-center items-center py-12" data-aos="fade-left">
+            <img src="/aboutusfoto (4).JPG" alt="foto1" class="w-3/4 h-full object-cover rounded-lg">
+        </div>
+
+        <!-- Baris 2: Gambar | Paragraf -->
+        <div class="flex flex-col items-center justify-center" data-aos="fade-right">
+            <img src="/asset/1tk.JPG" alt="foto2" class="w-3/4 h-2/4 object-cover rounded-lg">
+        </div>
+        <div class="relative flex flex-col justify-center" data-aos="fade-left">
+            <!-- visual dot -->
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute top-0 left-0"></p>
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute top-0 right-0"></p>
+            
+            <p class="text-black text-md lg:text-lg leading-8 px-6 mr-2 text-balance">
+                Menanggapi permasalahan tersebut, <a class="font-cinzel font-bold text-yellow-400">PT. Sembiring Gadai Taras</a> hadir untuk menawarkan solusi melalui layanan pemodalan 
+                jangka pendek dan panjang yang bertujuan membantu masyarakat Karo dalam upaya meningkatkan kualitas hidup mereka. 
+                Kehadiran outlet <a class="font-cinzel font-bold text-yellow-400">PT. Sembiring Gadai Taras</a> di wilayah Karo tidak hanya mendukung kebutuhan finansial masyarakat, tetapi 
+                juga berperan dalam meningkatkan literasi keuangan, sejalan dengan program pemerintah daerah dan nasional.    
+            </p>
+
+            <!-- visual dot -->
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute bottom-0 left-0"></p>
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute bottom-0 right-0"></p>
+        </div>
+
+        <!-- Baris 3: Paragraf | Gambar -->
+        <div class="relative flex flex-col justify-center" data-aos="fade-right">
+             <!-- visual dot -->
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute top-0 left-0"></p>
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute top-0 right-0"></p> 
+           
+            <p class="text-black text-md lg:text-lg leading-8 px-6 mr-2 text-balance">
+                Minimnya akses terhadap dana darurat seringkali memaksa masyarakat Karo untuk menjual aset dengan harga yang tidak 
+                sesuai harapan karena keterbatasan likuiditas di Karo. Dengan demikian, kehadiran <a class="font-cinzel font-bold text-yellow-400">PT. Sembiring Gadai Taras</a> diharapkan 
+                dapat menjadi jembatan bagi kebutuhan finansial jangka pendek maupun panjang bagi masyarakat, terkhusunya di Tanah Karo, sekaligus membantu masyarakat mempertahankan nilai aset mereka
+            </p>
+            <!-- visual dot -->
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute bottom-0 left-0"></p>
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute bottom-0 right-0"></p>                
+        </div>
+        <div class="flex flex-col items-center justify-center" data-aos="fade-left">
+            <img src="/asset/3tk.JPG" alt="foto3" class="w-3/4 h-2/4 object-cover rounded-lg">
+        </div>
+
+        <!-- Baris 4: Gambar | Paragraf -->
+        <div class="flex justify-center items-center py-12" data-aos="fade-right">
+            <img src="/asset/2tk.JPG" alt="foto4" class="w-3/4 h-full object-cover rounded-lg">
+        </div>
+        <div class="relative flex flex-col justify-center py-12" data-aos="fade-left">
+            <!-- visual dot -->
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute top-0 left-0"></p>
+            <p class="bg-yellow-400 rounded h-3 w-3 absolute top-0 right-0"></p>            
+            
+            <p class="text-black text-md lg:text-lg leading-8 px-6 mr-2 text-balance">
+                Sebagai penyedia layanan pegadaian swasta, <a class="font-cinzel font-bold text-yellow-400">PT. Sembiring Gadai Taras</a> berkomitmen untuk memberikan solusi keuangan yang 
+                inovatif, efisien, dan terjangkau bagi masyarakat Karo. Dengan layanan yang mudah diakses, cepat, serta biaya yang 
+                kompetitif, kami berupaya memberikan kontribusi yang signifikan dalam meningkatkan kesejahteraan masyarakat, baik melalui permodalan 
+                usaha maupun kebutuhan ekonomi lainnya. Dalam operasionalnya, <a class="font-cinzel font-bold text-yellow-400">PT. Sembiring Gadai Taras</a> berfokus pada kemudahan 
+                layanan, suku bunga rendah, dan edukasi masyarakat mengenai nilai aset yang digadaikan, demi terciptanya solusi keuangan yang berkelanjutan.
+            </p>
+            <!-- visual dot -->
+            <p class="bg-yellow-400 rounded h-1 w-full absolute bottom-0 right-0"></p>
+        </div>
+
+    </div>
+</section> 
+
+    
+<!-- Section Visi & Misi -->
+<section class="mt-2 px-8">
+    <div class="flex flex-col items-center justify-center relative text-center">
+        <!-- Separator lines for title -->
+        <span class="absolute inset-y-1/2 left-0 w-1/3 h-1 bg-gray-900"></span>
+        <h1 class="mx-4 font-bold text-3xl text-yellow-500 w-1/3">Visi & Misi</h1>
+        <span class="absolute inset-y-1/2 right-0 w-1/3 h-1 bg-gray-900"></span>
+    </div>
+    <h2 class="text-black text-center font-cinzel font-semibold mt-4">Sembiring Gadai Taras</h2>
+
+    <div class="flex flex-col sm:flex-row justify-between sm:justify-evenly my-10 sm:px-12 sm:py-4 text-center">
+        <!-- Visi Section -->
+        <div class="mt-4 sm:w-1/3" data-aos="fade-right">
+            <h2 class="text-3xl font-cinzel font-bold text-yellow-500">Visi</h2>
+            <p class="mt-4 text-black">
+                Menjadi wadah dan pilihan nomor satu bagi masyarakat Karo <br>
+                yang membutuhkan pendanaan darurat guna mempertahankan nilai aset.
+            </p>
+        </div>
+
+        <!-- Icon Centering Section -->
+        <div class="flex items-center justify-center sm:w-1/3 h-auto mt-4 sm:mt-0">
+            <i class="fa fa-share text-2xl text-black" aria-hidden="true" data-aos="zoom-in-down"></i>
+            <span class="w-16 h-16 flex items-center justify-center bg-white text-center mx-4" data-aos="zoom-in-down">
+                <i class="fa fa-bullseye text-black text-2xl" aria-hidden="true"></i>
+            </span>
+            <i class="fa fa-reply text-2xl text-black" aria-hidden="true" data-aos="zoom-in-down"></i>
+        </div>
+
+        <!-- Misi Section -->
+        <div class="mt-4 sm:w-1/3" data-aos="fade-left">
+            <h2 class="text-3xl font-cinzel font-bold text-yellow-500">Misi</h2>
+            <p class="mt-4 text-black">
+                Memberikan pelayanan yang terbaik dengan proses gadai yang
+                cepat, aman, dan terpercaya sesuai kebutuhan masyarakat Karo.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Quote Section -->
+<section class="px-6 sm:px-12 py-4" data-aos="fade-up">
+    <div class="flex flex-col items-center text-center">
+        <a class="text-md lg:text-lg italic">“Kekuatan Dalam Kebersamaan Keuangan.”</a>
+        <a>-</a>
+        <span class="text-md lg:text-lg font-cinzel underline mt-2">
+            <a class="text-yellow-500 text-md">Mari Si Arihken</a>, Mari Si Rasken.
+        </span>
+    </div>
+</section>
+
+    <!-- ojk -->
+    <section class="py-4 mt-12 bg-gray-900">
+        <div class="flex justify-center px-4 py-4 font-xs">
+            <div class="">
+                <img src="ojkbg.png" class="h-34 lg:h-28">
+            </div>
+            <div class="text-white text-center lg:text-left text-xs tracking-tighter lg:tracking-normal lg:text:lg my-auto ">
+                <a>PT Sembiring Gadai Taras yang telah terdaftar dengan izin dan pengawasan oleh<br>
+                    Otoritas Jasa Keuangan (OJK), sejak Oktober 2024 dengan nomor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- syarat pengajuan gadai -->
+    <section class="bg-gray-100 py-12">
+        <div class="flex justify-center text-center text-lg lg:text-2xl text-black font-cinzel font-bold py-8">
+            <h1 data-aos="fade-right">Syarat Pengajuan Gadai di <a class="text-yellow-500">PT. Sembiring Gadai Taras</a></h1>
+        </div>
+        <div class="container mx-auto flex flex-col md:flex-row">
+            <!-- Kolom Kiri (Gambar) -->
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="/asset/145.jpg" alt="Deskripsi Gambar" class="rounded-lg shadow-lg" data-aos="zoom-in-down">
+            </div>
+    
+            <!-- Kolom Kanan (Teks) -->
+            <div class="md:w-1/2 md:pl-10 text-gray-800 flex-row items-start">
+                <h2 class="text-lg lg:text-2xl font-bold mb-4" data-aos="zoom-in-right"><i class="fa-solid fa-circle-exclamation text-yellow-500"></i> Syarat <a class="text-yellow-500">Pengajuan :</a></h2>
+                <ol class="font-light text-sm lg:text-lg ml-20 self-center">
+                    <li class="mt-4 " data-aos="fade-down" >
+                        <i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i> <a> Merupakan Warga Negara Indonesia (WNI)</a>
+                    </li>
+                    <li class="mt-4" data-aos="fade-down">
+                        <i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i> Memiliki KTP dan telah berusia 17 tahun
+                    </li>
+                    <li class="mt-4" data-aos="fade-down">
+                        <i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i>  Membawa barang jaminan gadai beserta dokumen kepemilikan 
+                    </li>
+                    <li class="mt-4" data-aos="fade-down">
+                        <i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i> Jangka waktu pinjaman adalah 120 hari dan dapat diperpanjang dengan skema gadai uang
+                    </li>
+                    <li class="mt-4" data-aos="fade-down">
+                        <i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i> Menyetujui syarat dan ketentuan yang berlaku 
+                    </li>                     
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Produk Gadai -->
+<section class="px-8 py-16 bg-gradient-to-b from-gray-900 via-gray-800 to-yellow-100" id="pg">
+    <div class="text-center mb-12">
+        <h1 class="text-2xl lg:text-4xl font-cinzel font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-700">
+            Produk Gadai
+        </h1>
+        <p class="text-gray-200 text-sm lg:text-lg mt-2">Pilih jenis produk gadai sesuai dengan kebutuhan Anda</p>
+    </div>
+  
+    <div class="container mx-auto grid gap-10 md:grid-cols-3">
+        
+        <!-- Kartu Emas -->
+        <div class="bg-gradient-to-b from-gray-800 to-yellow-100gray-800 rounded-2xl shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl p-8 text-center" data-aos="fade-right">
+            <!-- <div class="w-24 h-24 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-6">
+                <i class="fa-sharp-duotone fa-solid fa-coins text-yellow-300 text-3xl" data-aos="fade-down"></i>
+            </div> -->
+            <h2 class="text-2xl font-cinzel font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-700 mb-3">Emas</h2>
+            <img src="/asset/emasbgrmv.png" alt="Gambar Emas" class="w-full h-auto object-contain  rounded-md">
+            <p class="text-sm lg:text-base text-gray-800 font-semibold">
+                Layanan gadai dengan jaminan emas. Proses cepat, aman, dan terpercaya untuk kebutuhan dana mendesak Anda.
+            </p>
+            <button id="emas" value="emas" onclick="produkDetail(this.value)" class="relative inline-flex items-center justify-center p-0.5 mb-2 mt-2 me-2 overflow-hidden text-sm font-semibold text-yellow-200 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-400">
+                <a class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Tata Cara
+                </a>
+            </button>
+        </div>
+  
+        <!-- Kartu Elektronik -->
+        <div class="bg-gradient-to-b from-gray-800 to-yellow-100 rounded-2xl shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl p-8 text-center" data-aos="fade-up">
+            <!-- <div class="w-24 h-24 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-6">
+              <i class="fa-solid fa-laptop text-green-700 text-3xl" data-aos="fade-down"></i>
+            </div> -->
+            <h2 class="text-2xl font-cinzel font-bold text-green-600 mb-3">Elektronik</h2>
+            <img src="/asset/elbgrmv.png" alt="Gambar Emas" class="w-full h-auto rounded-md">
+            <p class="text-sm lg:text-base text-gray-800 font-semibold">
+                Jaminan berbagai perangkat elektronik dengan nilai gadai yang kompetitif. Dapatkan dana cepat dan praktis.
+            </p>
+            <button id="elektronik" value="elektronik" onclick="produkDetail(this.value)" class="relative inline-flex items-center justify-center p-0.5 mb-2 mt-2 me-2 overflow-hidden text-sm font-semibold text-green-200 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-400">
+                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Tata Cara
+                </span>
+            </button>
+        </div>
+  
+        <!-- Kartu Kendaraan -->
+        <div class="bg-gradient-to-b from-gray-800 to-yellow-100 rounded-2xl shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl p-8 text-center" data-aos="fade-left">
+            <!-- <div class="w-24 h-24 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-6">
+              <i class="fa-solid fa-car text-red-700 text-3xl" data-aos="fade-down""></i>
+            </div> -->
+            <h2 class="text-2xl font-cinzel font-bold text-blue-600 mb-3">Kendaraan</h2>
+            <img src="/asset/mblbgrmv.png" alt="Gambar Emas" class="w-full h-auto rounded-md">
+            <p class="text-sm lg:text-base text-gray-800 font-semibold">
+                Gadai kendaraan dengan proses aman dan nilai pinjaman yang fleksibel sesuai nilai pasar kendaraan Anda.
+            </p>
+            <button id="kendaraan" value="kendaraan" onclick="produkDetail(this.value)" class="relative inline-flex items-center justify-center p-0.5 mb-2 mt-2 me-2 overflow-hidden text-sm font-semibold text-blue-200 rounded-lg group bg-gradient-to-br from-blue-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-400">
+                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Tata Cara
+                </span>
+            </button>
+        </div>
+    </div>
+  </section>
+
+<!-- Penjelasan Produk Emas-->
+<div id="produkEmas" class="my-4 p-4 hidden">
+    <div class="flex flex-col md:flex-row justify-center w-full space-y-6 md:space-y-0 md:space-x-10">
+        <!-- Persyaratan & Dokumen -->
+        <div class="flex flex-col items-center p-6 border-box w-full md:w-2/5">
+            <h1 class="text-2xl md:text-3xl font-bold self-start text-yellow-500" data-aos="fade-right">Persyaratan <span class="text-gray-900">&</span> <span class="text-black">Dokumen</span><i class="fa-regular fa-file ml-4"></i></h1>
+            <p class="self-center w-full md:w-3/4 p-4 my-4 text-base md:text-lg" data-aos="fade-up">
+                Untuk persyaratan yang harus nasabah lengkapi yaitu dengan membawa <span class="text-yellow-500 font-bold">KTP</span> dan barang jaminan berupa 
+                <br><span class="font-bold text-yellow-500">Emas/LM/Perhiasan.</span> Kemudian nasabah akan diwajibkan untuk menandatangani Surat Bukti Gadai (SBG) yang nantinya akan diberikan.
+            </p>
+        </div>
+
+        <!-- Prosedur Gadai Emas -->
+        <div class="flex flex-col items-center p-6 border-box w-full md:w-2/5">
+            <h1 class="font-bold text-2xl md:text-3xl self-start text-black" data-aos="fade-left">Prosedur <span class="text-gray-900">Gadai </span><span class="text-yellow-500">Emas:</span></h1>
+            <ul class="text-black self-center w-full md:w-3/4 p-4 my-4 space-y-2 text-base md:text-lg">
+                <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i>Datang ke kantor atau outlet <span class="text-yellow-500 font-semibold">Sembiring Gadai Taras</span></li>
+                <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i>Bawa barang jaminan yang akan digadaikan</li>
+                <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i>Berikan <span class="text-yellow-500 font-semibold">KTP</span> asli kepada petugas</li>
+                <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i>Nasabah mengisi Formulir Aplikasi Kredit (FAK)</li>
+                <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i>Memberikan Barang Jaminan kepada petugas</li>
+                <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i>Barang Jaminan ditaksir oleh penaksir</li>
+                <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i>Petugas akan memberitahu nilai pinjaman kepada nasabah</li>
+                <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i>Menandatangani Surat Bukti Gadai (SBG)</li>
+                <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-yellow-500 mr-2"></i>Nilai pinjaman akan diterima oleh nasabah secara tunai atau transfer</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Penjelasan Produk Elektronik-->
+    <div id="produkElektronik" class="my-4 p-4 flex hidden">
+        <div class="flex flex-col md:flex-row justify-center w-full space-y-6 md:space-y-0 md:space-x-10">
+            <!-- Persyaratan & Dokumen -->
+            <div class="flex flex-col items-center p-6 border-box w-full md:w-2/5">
+                <h1 class="text-2xl md:text-3xl font-bold self-start text-green-500" data-aos="fade-right">Persyaratan <span class="text-gray-900">&</span> <span class="text-black">Dokumen</span><i class="fa-regular fa-file text-green-500 ml-4"></i></h1>
+                <p class="self-center w-full md:w-3/4 p-4 my-4 text-base md:text-lg" data-aos="fade-up">Untuk persyaratan yang harus nasabah lengkapi yaitu dengan membawa <span class="text-green-500 font-bold">KTP</span> dan barang jaminan berupa 
+                    <br><span class="font-bold text-green-500">Kelengkapan Barang Elektronik. </span>Kemudian nasabah akan diwajibkan untuk menandatangani Surat Bukti Gadai (SBG) yang nantinya akan diberikan.
+                </p>
+            </div>
+    
+            <div class="flex flex-col items-center p-6 border-box w-full md:w-2/5">
+            <h1 class="font-bold text-2xl md:text-3xl self-start text-black" data-aos="fade-left">Prosedur <span class="text-gray-900">Gadai </span><span class="text-green-500">Elektronik:</span></h1>
+               <ul class="text-black self-center w-full md:w-3/4 p-4 my-4 space-y-2 text-base md:text-lg">
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-green-500 mr-2"></i>Datang ke kantor atau outlet <span class="text-green-500 font-semibold">Sembiring Gadai Taras</span></li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-green-500 mr-2"></i>Bawa barang jaminan yang akan digadaikan</li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-green-500 mr-2"></i>Berikan <span class="text-green-500 font-semibold">KTP</span> asli kepada petugas</li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-green-500 mr-2"></i>Nasabah mengisi Formulir Aplikasi Kredit (FAK)</li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-green-500 mr-2"></i>Memberikan Barang Jaminan kepada petugas</li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-green-500 mr-2"></i>Barang Jaminan ditaksir oleh penaksir</li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-green-500 mr-2"></i>Petugas akan memberitahu nilai pinjaman kepada nasabah</li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-green-500 mr-2"></i>Menandatangani Surat Bukti Gadai (SBG) </li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-green-500 mr-2"></i>Nilai pinjaman akan diterima oleh nasabah secara tunai atau transfer</li>
+               </ul>
+            </div>
+        </div>
+      </div>
+
+          <!-- Penjelasan Produk Kendaraan-->
+    <div id="produkKendaraan" class="my-4 p-4 flex hidden">
+        <div class="flex flex-col md:flex-row justify-center w-full space-y-6 md:space-y-0 md:space-x-10">
+            <!-- Persyaratan & Dokumen -->           
+             <div class="flex flex-col items-center p-6 border-box w-full  md:w-2/5">
+                <h1 class="text-2xl md:text-3xl font-bold self-start text-blue-500" data-aos="fade-right">Persyaratan <span class="text-gray-900">&</span> <span class="text-black">Dokumen</span><i class="fa-regular fa-file text-blue-500 ml-4"></i></h1>
+                <p class="self-center w-full md:w-3/4 p-4 my-4 text-base md:text-lg" data-aos="fade-up">Untuk persyaratan yang harus nasabah lengkapi yaitu dengan membawa <span class="text-blue-500 font-bold">KTP</span> dan barang jaminan berupa 
+                    <br><span class="font-bold text-blue-500">BPKB dan STNK Asli, Faktur Pembelian, Pajak BPKB dan STNK hidup. </span>Kemudian nasabah akan diwajibkan untuk menandatangani Surat Bukti Gadai (SBG) yang nantinya akan diberikan.
+                </p>
+            </div>
+    
+            <div class="flex flex-col items-center p-6 border-box w-full md:w-2/5">
+               <h1 class="font-bold text-2xl md:text-3xl self-start text-black" data-aos="fade-left">Prosedur <span class="text-gray-900">Gadai </span><span class="text-blue-500">Kendaraan:</span></h1>
+               <ul class="text-black self-center w-full md:w-3/4 p-4 my-4 space-y-2 text-base md:text-lg">
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-blue-500 mr-2"></i>Datang ke kantor atau outlet <span class="text-blue-500 font-semibold">Sembiring Gadai Taras</span></li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-blue-500 mr-2"></i>Bawa barang jaminan yang akan digadaikan</li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-blue-500 mr-2"></i>Berikan <span class="text-blue-500 font-semibold">KTP</span> asli kepada petugas</li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-blue-500 mr-2"></i>Nasabah mengisi Formulir Aplikasi Kredit (FAK)</li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-blue-500 mr-2"></i>Memberikan Barang Jaminan kepada petugas</li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-blue-500 mr-2"></i>Barang Jaminan ditaksir oleh penaksir</li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-blue-500 mr-2"></i>Petugas akan memberitahu nilai pinjaman kepada nasabah</li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-blue-500 mr-2"></i>Menandatangani Surat Bukti Gadai (SBG) </li>
+                    <li data-aos="fade-left"><i class="fa-solid fa-angle-right text-blue-500 mr-2"></i>Nilai pinjaman akan diterima oleh nasabah secara tunai atau transfer</li>
+               </ul>
+            </div>
+        </div>
+      </div>
+
+  <!-- Section Hubungi Kami -->
+<section class="px-8 py-16 bg-gradient-to-br from-gray-100 to-gray-300">
+    <div class="text-center mb-12">
+        <h1 class="text-2xl lg:text-4xl font-cinzel font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-800">
+            Hubungi Kami
+        </h1>
+        <p class="text-gray-600 text-md lg:text-lg mt-2">Lokasi kantor dan informasi kontak kami</p>
+    </div>
+  
+    <div class="container mx-auto grid gap-8 md:grid-cols-2 items-start">
+        
+        <!-- Peta Lokasi -->
+        <div class="rounded-lg overflow-hidden shadow-lg">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.2188488742945!2d98.50891801560643!3d3.189463388618065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303102f3a818f071%3A0xad23829115431bad!2sBukit%20Florist%20%26%20Salon!5e0!3m2!1sid!2sid!4v1730279032338!5m2!1sid!2sid" 
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+  
+        <!-- Informasi Kontak -->
+        <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col justify-start h-full">
+            <h2 class="text-3xl font-cinzel font-bold text-yellow-600 mb-4" data-aos="fade-down">Kantor Pusat</h2>
+            <p class="mb-2 font-cinzel text-yellow-500 font-extrabold">08.00 : 18.00</p>
+            <p class="text-gray-700 mb-4" data-aos="fade-left">
+                <i class="fa fa-map-marker-alt text-yellow-500 mr-2" data-aos="fade-down"></i>
+                Jalan Veteran No. 635, Samping Permata Ponsel, Berastagi 22512, Medan, Indonesia
+            </p>
+            <p class="text-gray-700 mb-4" data-aos="fade-left">
+                <i class="fa fa-phone text-yellow-500 mr-2" data-aos="fade-down"></i>
+                0878 8167 1529
+            </p>
+            <p class="text-gray-700" data-aos="fade-left">
+                <i class="fa fa-envelope text-yellow-500 mr-2" data-aos="fade-down"></i>
+                Sembiringadaitaras@gmail.com
+            </p>
+            <div class="mt-8 flex space-x-4" data-aos="fade-down">
+                <a href="#" class="text-yellow-600 hover:text-yellow-800">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="#" class="text-yellow-600 hover:text-yellow-800">
+                    <i class="fab fa-facebook text-2xl"></i>
+                </a>
+                <a href="#" class="text-yellow-600 hover:text-yellow-800">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+  </section>
+    
+
+    <footer class="py-8 font-semibold" style="background-color: #010e15f1; color: #d4d4cd;">
+        <div class="container mx-auto flex flex-wrap justify-between px-4 md:px-0">
+            <!-- Logo dan Nama Perusahaan -->
+            <div class="w-full md:w-1/3 mb-8 flex flex-col items-center text-center">
+                <h2 class="text-xl lg:text-2xl font-cinzel font-bold mb-4 uppercase bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-400 inline-block text-transparent bg-clip-text">PT. Sembiring Gadai Taras</h2>
+                <p class="text-xs lg:text-sm leading-relaxed">
+                    Berizin dan diawasi oleh Otoritas Jasa Keuangan,<br> 
+                    Anggota terdaftar dari <img src="ppgi.png" alt="PFGI Logo" class="inline-block align-middle h-18 ml-2">
+                </p>
+                <div class="container mb-auto"></div>
+                <div class="container border-t border-gray-500"></div>
+            </div>
+            
+    
+            <!-- Kontak Telepon dan Email -->
+            <div class="w-full md:w-1/3 mb-8 flex flex-col items-center text-center">
+                <h2 class="text-xl lg:text-2xl font-cinzel font-bold mb-4 uppercase bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 inline-block text-transparent bg-clip-text">Kontak Kami</h2>
+                <div class="flex items-center mb-3 text-xs lg:text-sm">
+                    <i class="fa fa-phone text-yellow-300"></i>
+                    <span class="ml-3">(021) 3005 1075</span>
+                </div>
+                <div class="flex items-center mb-3 text-xs lg:text-sm">
+                    <i class="fa fa-phone text-yellow-300"></i>
+                    <span class="ml-3">0878 8167 1529</span>
+                </div>
+                <div class="flex items-center text-xs lg:text-sm">
+                    <i class="fa fa-envelope text-yellow-300"></i>
+                    <span class="ml-3">Sembiringgadaitaras@gmail.com</span>
+                </div>
+                <!-- Social Media Links -->
+                <div class="flex mt-4 space-x-4">
+                    <a href="https://api.whatsapp.com/send?phone=6287881671529" class="text-yellow-300 hover:text-yellow-700">
+                        <i class="fab fa-whatsapp text-2xl lg:text-3xl"></i>
+                    </a>
+                    <a href="" class="text-yellow-300 hover:text-yellow-700">
+                        <i class="fab fa-facebook text-2xl lg:text-3xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sembiringadaitaras?igsh=NHVscnVtY3l4dXhn" class="text-yellow-300 hover:text-yellow-700">
+                        <i class="fab fa-instagram text-2xl lg:text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Alamat Perusahaan -->
+            <div class="w-full md:w-1/3 mb-8 flex flex-col items-center text-center">
+                <h2 class="text-xl lg:text-2xl font-cinzel font-bold mb-4 uppercase bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 inline-block text-transparent bg-clip-text">Kantor Pusat</h2>
+                <p class="text-xs lg:text-sm leading-relaxed">
+                    Jalan Veteran No. 69<br>
+                    Berastagi 22512<br>
+                    Karo, Indonesia
+                </p>
+                <div class="container my-auto"></div>
+                <div class="container border-t border-gray-500"></div>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <img src="logowhite.png" class="h-14 brightness-200" alt="logofooter">
+        </div>
+    
+        <!-- Informasi Hak Cipta dan Navigasi -->
+        <div class="container mx-auto mt-8 border-t border-gray-500 pt-4 text-center text-sm">
+            <p>&copy; 2024 Sembiring Gadai Taras. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+    
+    
+
+
+    <script>
+        AOS.init({
+            duration: 600, // Durasi animasi
+        });
+
+        function produkDetail(Value) {
+            if (Value === 'emas'){
+                document.getElementById('produkEmas').classList.remove('hidden')
+                document.getElementById('produkElektronik').classList.add('hidden')
+                document.getElementById('produkKendaraan').classList.add('hidden')
+                document.getElementById('produkEmas').scrollIntoView();
+            }
+            if (Value === 'elektronik'){
+                document.getElementById('produkElektronik').classList.remove('hidden')
+                document.getElementById('produkEmas').classList.add('hidden')
+                document.getElementById('produkKendaraan').classList.add('hidden')
+            }
+            if (Value === 'kendaraan'){
+                document.getElementById('produkElektronik').classList.add('hidden')
+                document.getElementById('produkEmas').classList.add('hidden')
+                document.getElementById('produkKendaraan').classList.remove('hidden')
+            }
+        }
+    </script>
+</body>
+</html>
