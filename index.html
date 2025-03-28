@@ -27,56 +27,133 @@
      section{
         overflow: hidden;
      }
+
+     /* Styling untuk tombol close */
+    #mobile-menu .close-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Overlay background saat menu dibuka */
+    body.menu-open {
+        overflow: hidden; /* Disable scrolling */
+    }
+    /* Tambahkan ini ke bagian style */
+#mobile-menu {
+    width: 80%; /* Lebih lebar untuk tampilan yang lebih nyaman */
+    background: rgba(15, 23, 42, 0.95); /* Warna lebih modern dengan opacity */
+    backdrop-filter: blur(10px); /* Efek blur modern */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    padding-top: 4rem; /* Ruang lebih untuk tombol close */
+    transition: transform 0.3s ease-in-out;
+
+}
+
+#mobile-menu a {
+    padding: 12px 16px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+#mobile-menu a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    padding-left: 20px;
+}
+
+#close-menu {
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hamburger-menu {
+    z-index: 50;
+    transition: transform 0.3s ease;
+}
+
+#hamburger-menu.active {
+    transform: rotate(90deg);
+}
+        /* Tambahkan overlay */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+}
+
+.menu-open .mobile-menu-overlay {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+    
   </style>
-
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.js"></script>
-    <script>
-    window.addEventListener('scroll', function(){
-        const navbar = document.getElementById('navbar'); 
-        const items = navbar.querySelectorAll('a');
-        if (window.scrollY > 1) {
-          navbar.classList.add('bg-white','text-black');
-          navbar.classList.remove('bg-transparent');
-          
-          items.forEach(item => {
-            item.classList.remove('text-white');
-            item.classList.add('text-black');
-          })
-        }
-        else {
-          navbar.classList.remove('bg-white', 'text-black');
-          navbar.classList.add('bg-transparent');
-
-          items.forEach(item => {
-            item.classList.remove('text-black');
-            item.classList.add('text-white');
-          });
-        }
-      });
-    </script>
 </head>
 <body class="">
-    <!-- Navbar -->
-    <header id="navbar" class="fixed top-0 left-0 w-full z-10 bg-transparent">
-        <div class="max-w-7xl ml-8 py-4 px-4 sm:px-1 lg:px-8 lg:ml-40">
-            <div class="flex items-center py-6">
-                <div class="flex-shrink-0">
-                    <a href="" class="text-2xl font-bold text-white">
-                        <img src="logo.png" class="h-12" alt="8">
+<!-- Navbar -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between py-6">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="#" class="text-2xl font-bold text-white">
+                    <img src="logo.png" class="h-12" alt="Logo Sembiring Gadai Taras">
+                </a>
+            </div>
+
+            <!-- Tombol Hamburger (Hanya Tampil di Layar Kecil) -->
+            <button id="hamburger-menu" class="md:hidden text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Menu Mobile -->
+            <nav id="mobile-menu" class="fixed top-0 right-0 w-64 h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700 text-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden shadow-lg">
+                <!-- Tombol Close -->
+                <!-- <button id="close-menu" class="absolute top-4 right-4 text-white text-xl focus:outline-none">
+                    <i class="fa-solid fa-xmark"></i>
+                </button> -->
+
+                <!-- Isi Menu -->
+                <div class="flex flex-col justify-start items-start p-8 space-y-6">
+                    <a href="#tk" class="text-white font-semibold text-lg hover:text-yellow-300">Tentang Kami</a>
+                    <a href="#pg" class="text-white font-semibold text-lg hover:text-yellow-300">Produk Gadai</a>
+                    <a href="#" class="text-white font-semibold text-lg hover:text-yellow-300">Berita & Artikel</a>
+                    <a href="#" class="text-white font-semibold text-lg hover:text-yellow-300">Karir</a>
+                    <a href="https://www.whatsapp.com/download" class="font-semibold text-lg hover:text-green-500">
+                        <button class="font-semibold text-yellow-400 bg-clip-text bg-yellow-50 hover:text-green-500">Hubungi Kami</button>
                     </a>
                 </div>
-                <nav class="hidden ml-20 md:flex space-x-10">
-                    <a href="#tk" class="text-white font-semibold text-md hover:text-yellow-300">Tentang Kami</a>
-                    <a href="#pg" class="text-white font-semibold text-md hover:text-yellow-300">Produk Gadai</a>
-                    <a href="#" class="text-white font-semibold text-md hover:text-yellow-300">Berita & Artikel</a>
-                    <a href="#" class="text-white font-semibold text-md hover:text-yellow-300">Karir</a>
-                    <a href="https://www.whatsapp.com/download" class="font-semibold text-md hover:text-yellow-300">
+            </nav>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex space-x-6 text-white">
+                <a href="#tk" class="text-white font-semibold text-md hover:text-yellow-300">Tentang Kami</a>
+                <a href="#pg" class="text-white font-semibold text-md hover:text-yellow-300">Produk Gadai</a>
+                <a href="#" class="text-white font-semibold text-md hover:text-yellow-300">Berita & Artikel</a>
+                <a href="#" class="text-white font-semibold text-md hover:text-yellow-300">Karir</a>
+                <a href="https://www.whatsapp.com/download" class="font-semibold text-md hover:text-yellow-300">
                     <button class="font-semibold text-yellow-400 bg-clip-text bg-yellow-50 hover:text-green-500">Hubungi Kami</button>
-                    </a>
-                </nav>
-            </div>
+                </a>
+            </nav>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <div class="relative pt-24 lg:pt-44">
@@ -89,12 +166,17 @@
             <div class="absolute inset-0 bg-black opacity-30"></div>
         </div>
         <div class="relative flex flex-col items-center justify-end text-center max-w-7xl mx-auto py-32 px-6 sm:py-48 lg:px-8 lg:ml-50 lg:mb-12">
-            <h1 class="font-cinzel font-bold text-2xl lg:text-6xl text-white">
-                <p class="text-yellow-400" style=" text-decoration-line: underline; text-decoration-color: currentColor; text-decoration-thickness: 3px; text-underline-offset: 10px;">Sembiring <span style="color: aliceblue; text-decoration-line: underline; text-decoration-color: currentColor; text-decoration-thickness: 3px; text-underline-offset: 10px;"> Gadai Taras</span> </p>
+            <h1 class="font-cinzel font-bold text-3xl lg:text-6xl text-white">
+                <p class="text-yellow-400" style="text-decoration-line: underline; text-decoration-color: currentColor; text-decoration-thickness: 3px; text-underline-offset: 10px;">
+                    Sembiring <span style="color: aliceblue; text-decoration-line: underline; text-decoration-color: currentColor; text-decoration-thickness: 3px; text-underline-offset: 10px;"> Gadai Taras</span>
+                </p>
             </h1>
             <p></p>
-            <a href="#" class="font-cinzel text-xs leading-6 lg:text-lg inline-block text-white font-semibold py-2 px-2 rounded-md hover:bg-gray-900">
+            <p class="font-cinzel text-sm leading-6 lg:text-lg inline-block text-white font-semibold py-2 px-2 rounded-md">
                 <span class="text-yellow-400">"Kekuatan Dalam</span> Kebersamaan Keuangan"
+            </p>
+            <a href="#pg" class="mt-4 bg-yellow-400 text-black font-bold text-xs lg:text-xl py-3 px-6 rounded-lg shadow-lg transition duration-300 bg-gradient-to-r from-yellow-400 via-yellow-400 to-yellow-400 hover:from-yellow-400 hover:via-yellow-300 hover:to-white hover:text-black">
+                Lihat Layanan Gadai Kami
             </a>
         </div>
     </div>
@@ -556,7 +638,40 @@
     
     
     
-    
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.js"></script>
+    <script>
+    window.addEventListener('scroll', function(){
+        const navbar = document.getElementById('navbar');
+        const items = navbar.querySelectorAll('nav > a'); // Hanya memilih link langsung di dalam navbar
+        const hamburgerIcon = document.getElementById('hamburger-menu').querySelector('i');
+
+        if (window.scrollY > 1) {
+            navbar.classList.add('bg-white', 'text-black');
+            navbar.classList.remove('bg-transparent');
+
+            items.forEach(item => {
+                item.classList.remove('text-white');
+                item.classList.add('text-black');
+            });
+
+            // Ubah warna ikon hamburger jika diperlukan
+            hamburgerIcon.classList.remove('text-white');
+            hamburgerIcon.classList.add('text-black');
+        } else {
+            navbar.classList.remove('bg-white', 'text-black');
+            navbar.classList.add('bg-transparent');
+
+            items.forEach(item => {
+                item.classList.remove('text-black');
+                item.classList.add('text-white');
+            });
+
+            // Kembalikan warna ikon hamburger ke semula
+            hamburgerIcon.classList.remove('text-black');
+            hamburgerIcon.classList.add('text-white');
+        }
+    });
+    </script>
 
 
     <script>
@@ -582,6 +697,41 @@
                 document.getElementById('produkKendaraan').classList.remove('hidden')
             }
         }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        // Toggle menu saat tombol hamburger diklik
+        hamburgerMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('menu-open');
+            hamburgerMenu.classList.toggle('active');
+        });
+
+
+        // Close menu saat mengklik di luar area menu
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('menu-open');
+                hamburgerMenu.classList.remove('active');
+            }
+        });
+
+        // Close menu saat link diklik
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('menu-open');
+                hamburgerMenu.classList.remove('active');
+            });
+        });
+    });
     </script>
+    <!-- Overlay untuk menu mobile -->
+<div class="mobile-menu-overlay" id="mobile-overlay"></div>
 </body>
 </html>
